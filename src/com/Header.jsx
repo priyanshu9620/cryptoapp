@@ -12,7 +12,7 @@ const Header = () => {
           <Link to="/exchanges">Exchanges</Link>
         </Button>
         <Button p={2} variant="unstyled" color="white">
-          <Link to="/coins">Coins</Link>
+          <Link to="/coin">Coins</Link>
         </Button>
       </HStack>
     </div>
