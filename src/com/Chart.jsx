@@ -6,7 +6,6 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 } from "chart.js";
@@ -16,7 +15,6 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend
 );
@@ -28,6 +26,7 @@ const Chart = ({ arr = [], currency, days }) => {
   for (let i = 0; i < arr.length; i++) {
     if (days === "24h") date.push(new Date(arr[i][0]).toLocaleTimeString());
     else date.push(new Date(arr[i][0]).toLocaleDateString());
+    console.log(new Date(arr[i][0]));
     prices.push(arr[i][1]);
   }
 
@@ -37,8 +36,8 @@ const Chart = ({ arr = [], currency, days }) => {
       {
         label: `Price in ${currency}`,
         data: prices,
-        borderColor: "rgb(255,99,132)",
-        backgroundColor: "rgba(255,99,132,0.5)",
+        borderColor: "green",
+        backgroundColor: "green",
       },
     ],
   };

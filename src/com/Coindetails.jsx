@@ -115,7 +115,7 @@ const Coindetails = () => {
             {btns.map((i) => (
               <Button
                 disabled={days === i}
-                key={i}
+                key={i}  //this is just specifying uniqueness no use 
                 onClick={() => switchChartStats(i)}
               >
                 {i}
@@ -133,8 +133,7 @@ const Coindetails = () => {
 
           <VStack spacing={"4"} p="16" alignItems={"flex-start"}>
             <Text fontSize={"small"} alignSelf="center" opacity={0.7}>
-              Last Updated On{" "}
-              {Date(coin.market_data.last_updated).split("G")[0]}
+              Last Updated On{Date(coin.market_data.last_updated).split("G")[0]}
             </Text>
 
             <Image
@@ -210,7 +209,7 @@ const Item = ({ title, value }) => (
 
 const CustomBar = ({ high, low }) => (
   <VStack w={"full"}>
-    <Progress value={50} colorScheme={"teal"} w={"full"} />
+    <Progress value={45} colorScheme={"teal"} w={"full"} />
     <HStack justifyContent={"space-between"} w={"full"}>
       <Badge children={low} colorScheme={"red"} />
       <Text fontSize={"sm"}>24H Range</Text>
